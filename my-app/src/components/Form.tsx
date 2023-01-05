@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-
+import Image from '../images/arrowdown.png';
 type Values = {
     firstName : string,
     secondName : string,
@@ -29,14 +29,14 @@ const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {
 
 return (
 <div className="form">
-
+<div className="title">
+<h2>Please change your name here</h2><img src={Image}/>
+</div>
 <form onSubmit={(e) => handleSubmit(e)}>
-  <label >First name: <input type="text" id="fname" name={"firstName"} onChange={handleChange} value={values.firstName}></input><br/>
-  </label>
-  
-  <label>Second name: <input type="text" id="lname" name={"secondName"} onChange={handleChange} value={values.secondName}></input><br/>
-  </label>
-  <input type="submit" value="Submit"/>
+  <input type="text" id="fname" name={"firstName"} onChange={handleChange} value={values.firstName}  placeholder="First name"></input><br/>
+
+  <input type="text" id="lname" name={"secondName"} onChange={handleChange} value={values.secondName} placeholder="Second name"></input><br/>
+  <input className="btn"type="submit" value="Submit"/>
 </form>
 </div>
 );

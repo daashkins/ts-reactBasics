@@ -29,13 +29,12 @@ const updateName = (firstName: string | "", secondName: string | ""):void => {
 
 return (
 <div className="main">
-<h2>User</h2>
+<h2>Your profile:</h2>
 <p>First name: {firstName}</p>
 <p>Second name: {secondName}</p>
 <p>Address: {address}</p>
 <p>Age: {age}</p>
 
-<h3>Change the name</h3>
 <Form updateName={updateName}/>
 </div>
 );
